@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JT Floors | Premium Flooring Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../public/jt-logo.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="../public/jt-logo.png" alt="JT Floors" class="logo-img">
+        <span class="logo-text">JT Floors</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="estimator.html" class="nav-link nav-cta">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="hero-badge">Melbourne's Trusted Flooring Experts</span>
+      <h1 class="hero-title">Beautiful Floors,<br><span class="accent">Built to Last</span></h1>
+      <p class="hero-subtitle">Premium carpet and hard flooring installation with expert craftsmanship. From selection to installation, we deliver flawless results every time.</p>
+      <div class="hero-actions">
+        <a href="estimator.html" class="btn btn-primary btn-lg">Get Free Estimate</a>
+        <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">2,500+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5★</span>
+          <span class="stat-label">Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive flooring solutions tailored to your space, style, and budget.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M4 24h40M24 4v40M4 14h10M14 4v10M34 4v10M34 4h10M4 34h10M14 34v10M34 34v10M34 34h10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Carpet Installation</h3>
+          <p class="service-desc">Luxurious carpet supply and installation for homes and commercial spaces. We work with all major brands and styles to find your perfect match.</p>
+          <ul class="service-features">
+            <li>Residential & commercial</li>
+            <li>All carpet types & brands</li>
+            <li>Expert measuring & fitting</li>
+          </ul>
+        </div>
+        <div class="service-card featured">
+          <div class="card-badge">Most Popular</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="18" height="40" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <rect x="26" y="4" width="18" height="40" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <line x1="4" y1="24" x2="22" y2="24" stroke="currentColor" stroke-width="2"/>
+              <line x1="26" y1="17" x2="44" y2="17" stroke="currentColor" stroke-width="2"/>
+              <line x1="26" y1="31" x2="44" y2="31" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Hybrid & Laminate</h3>
+          <p class="service-desc">Durable, waterproof hybrid and laminate flooring perfect for Australian conditions. Beautiful timber looks with modern performance.</p>
+          <ul class="service-features">
+            <li>Waterproof options</li>
+            <li>Timber-look finishes</li>
+            <li>Low maintenance</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 44L24 4l20 40H4z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M14 44L24 20l10 24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <line x1="9" y1="34" x2="39" y2="34" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Timber Flooring</h3>
+          <p class="service-desc">Genuine hardwood timber floors that add warmth and value to any space. Sanding, polishing, and new installations available.</p>
+          <ul class="service-features">
+            <li>Solid & engineered timber</li>
+            <li>Sanding & polishing</li>
+            <li>Staining & finishing</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <rect x="10" y="10" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="10" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="10" y="26" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+              <rect x="26" y="26" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Vinyl & LVP</h3>
+          <p class="service-desc">Luxury vinyl plank and sheet vinyl for a cost-effective, stylish flooring solution. Ideal for wet areas and high-traffic zones.</p>
+          <ul class="service-features">
+            <li>Wet area suitable</li>
+            <li>Budget-friendly</li>
+            <li>Wide design range</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M24 8v16l12 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Floor Preparation</h3>
+          <p class="service-desc">Professional subfloor preparation including levelling, moisture barriers, and underlay installation for a perfect foundation.</p>
+          <ul class="service-features">
+            <li>Self-levelling compounds</li>
+            <li>Moisture barriers</li>
+            <li>Underlay installation</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 40V16l16-12 16 12v24H8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <rect x="18" y="26" width="12" height="14" stroke="currentColor" stroke-width="2"/>
+              <line x1="24" y1="26" x2="24" y2="40" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Commercial Flooring</h3>
+          <p class="service-desc">Large-scale commercial flooring projects including offices, retail, hospitality, and strata. Fully licensed and insured.</p>
+          <ul class="service-features">
+            <li>Office & retail fit-outs</li>
+            <li>Strata & body corporate</li>
+            <li>Fully insured</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container cta-content">
+      <div class="cta-text">
+        <h2>Ready to Transform Your Space?</h2>
+        <p>Use our instant quote estimator to get a ballpark figure for your project — no obligation, no hassle.</p>
+      </div>
+      <a href="estimator.html" class="btn btn-white btn-lg">Try Our Estimator →</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <span class="section-tag">Who We Are</span>
+        <h2 class="section-title">Flooring Done Right,<br>Every Time</h2>
+        <p>JT Floors is a Melbourne-based flooring company built on quality workmanship and honest service. With over 15 years in the industry, we've earned a reputation for delivering exceptional results on every project — big or small.</p>
+        <p>We handle everything from initial consultation and product selection through to professional installation and aftercare. Our team stays up to date with the latest products and techniques to ensure your floors look stunning and stand the test of time.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>Licensed & Insured</strong>
+              <span>Fully licensed flooring professionals</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>Quality Guaranteed</strong>
+              <span>We stand behind every installation</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>Free Consultations</strong>
+              <span>Obligation-free measure & quote</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon">✓</div>
+            <div>
+              <strong>Competitive Pricing</strong>
+              <span>Premium quality at fair prices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-image-placeholder">
+          <div class="placeholder-inner">
+            <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="80">
+              <rect x="10" y="10" width="100" height="100" rx="8" stroke="currentColor" stroke-width="3"/>
+              <rect x="20" y="50" width="30" height="50" rx="2" fill="currentColor" opacity="0.15"/>
+              <rect x="55" y="30" width="30" height="70" rx="2" fill="currentColor" opacity="0.2"/>
+              <rect x="15" y="70" width="30" height="30" rx="2" fill="currentColor" opacity="0.1"/>
+              <rect x="70" y="55" width="30" height="45" rx="2" fill="currentColor" opacity="0.12"/>
+            </svg>
+            <p>Quality Craftsmanship<br>Since 2009</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Recent Projects</h2>
+        <p class="section-subtitle">A selection of our latest flooring installations across Melbourne.</p>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="carpet">Carpet</button>
+        <button class="filter-btn" data-filter="hybrid">Hybrid</button>
+        <button class="filter-btn" data-filter="timber">Timber</button>
+        <button class="filter-btn" data-filter="vinyl">Vinyl</button>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-category="hybrid">
+          <div class="gallery-placeholder" style="--hue: 30">
+            <span>Hybrid Flooring</span>
+            <small>Residential — Doncaster</small>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="carpet">
+          <div class="gallery-placeholder" style="--hue: 210">
+            <span>Plush Carpet</span>
+            <small>Bedroom Suite — Brighton</small>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="timber">
+          <div class="gallery-placeholder" style="--hue: 25">
+            <span>Spotted Gum Timber</span>
+            <small>Open Plan Living — Hawthorn</small>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="vinyl">
+          <div class="gallery-placeholder" style="--hue: 180">
+            <span>Luxury Vinyl Plank</span>
+            <small>Commercial — CBD Office</small>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="hybrid">
+          <div class="gallery-placeholder" style="--hue: 40">
+            <span>Hybrid Planks</span>
+            <small>Full Home — Ringwood</small>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="carpet">
+          <div class="gallery-placeholder" style="--hue: 250">
+            <span>Loop Pile Carpet</span>
+            <small>Office Fit-out — South Yarra</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"JT Floors did an incredible job on our hybrid flooring throughout the entire house. Professional, tidy, and the result is stunning. Couldn't recommend them more highly!"</p>
+          <div class="testimonial-author">
+            <strong>Sarah M.</strong>
+            <span>Doncaster, VIC</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Had carpet installed in 4 bedrooms. The team was on time, super efficient, and left everything spotless. Great communication from start to finish."</p>
+          <div class="testimonial-author">
+            <strong>James T.</strong>
+            <span>Brighton, VIC</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We used JT Floors for our office renovation — vinyl planks across 300m². Exceptional quality and they worked around our schedule. Will definitely use again."</p>
+          <div class="testimonial-author">
+            <strong>Michelle R.</strong>
+            <span>Melbourne CBD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Talk Flooring</h2>
+        <p>Ready to start your project? Get in touch for a free consultation and measure. We service all areas across Melbourne and surrounding suburbs.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:0400000000">0400 000 000</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@jtfloors.com.au">info@jtfloors.com.au</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="22"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Service Area</strong>
+              <span>All Melbourne Metro &amp; Surrounds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm">
+          <h3>Send Us a Message</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Required</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="carpet">Carpet Installation</option>
+              <option value="hybrid">Hybrid / Laminate</option>
+              <option value="timber">Timber Flooring</option>
+              <option value="vinyl">Vinyl / LVP</option>
+              <option value="commercial">Commercial Flooring</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="../public/jt-logo.png" alt="JT Floors" class="logo-img">
+          <span class="logo-text">JT Floors</span>
+        </a>
+        <p>Premium flooring solutions across Melbourne. Quality workmanship, honest service, stunning results.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="estimator.html">Quote Estimator</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Carpet Installation</a></li>
+          <li><a href="#services">Hybrid & Laminate</a></li>
+          <li><a href="#services">Timber Flooring</a></li>
+          <li><a href="#services">Vinyl & LVP</a></li>
+          <li><a href="#services">Floor Preparation</a></li>
+          <li><a href="#services">Commercial Flooring</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0400000000">0400 000 000</a></li>
+          <li><a href="mailto:info@jtfloors.com.au">info@jtfloors.com.au</a></li>
+          <li>Melbourne, VIC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 JT Floors. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

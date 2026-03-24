@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Estimator | JT Floors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../public/jt-logo.png">
+</head>
+<body class="estimator-page">
+  <!-- Navigation -->
+  <nav class="navbar navbar-solid" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="../public/jt-logo.png" alt="JT Floors" class="logo-img">
+        <span class="logo-text">JT Floors</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#about" class="nav-link">About</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="estimator.html" class="nav-link nav-cta active">Get a Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Estimator Hero -->
+  <section class="estimator-hero">
+    <div class="container">
+      <span class="section-tag">Free Instant Estimate</span>
+      <h1 class="section-title">Flooring Quote Estimator</h1>
+      <p class="section-subtitle">Get a ballpark price for your flooring project in seconds. Select your flooring type, enter your measurements, and choose your product range.</p>
+      <p class="estimator-disclaimer">* Estimates are indicative only. Final pricing depends on site conditions, product selection, and access. Contact us for an accurate quote.</p>
+    </div>
+  </section>
+
+  <!-- Estimator Tool -->
+  <section class="section estimator-section">
+    <div class="container">
+      <!-- Step Indicator -->
+      <div class="step-indicator">
+        <div class="step active" data-step="1">
+          <div class="step-circle">1</div>
+          <span>Flooring Type</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">
+          <div class="step-circle">2</div>
+          <span>Measurements</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">
+          <div class="step-circle">3</div>
+          <span>Product Range</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="4">
+          <div class="step-circle">4</div>
+          <span>Your Estimate</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Flooring Type -->
+      <div class="estimator-step" id="step1">
+        <h2>What type of flooring are you after?</h2>
+        <p class="step-desc">Choose the flooring category that best fits your project.</p>
+        <div class="type-selector">
+          <button class="type-card" data-type="carpet" id="typeCarpet">
+            <div class="type-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="48">
+                <rect x="6" y="6" width="52" height="52" rx="6" stroke="currentColor" stroke-width="2.5"/>
+                <path d="M6 20h52M6 34h52M6 48h52" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                <path d="M20 6v52M38 6v52" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3>Carpet</h3>
+            <p>Measured in <strong>lineal meters</strong><br>(standard 3.66m wide rolls)</p>
+          </button>
+          <button class="type-card" data-type="hard" id="typeHard">
+            <div class="type-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" width="48">
+                <rect x="6" y="6" width="22" height="52" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                <rect x="36" y="6" width="22" height="52" rx="3" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="6" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="36" y1="22" x2="58" y2="22" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="36" y1="42" x2="58" y2="42" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3>Hard Flooring</h3>
+            <p>Measured in <strong>square meters (m²)</strong><br>Hybrid, laminate, timber, vinyl</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Measurements -->
+      <div class="estimator-step hidden" id="step2">
+        <h2>Enter your measurements</h2>
+
+        <!-- Carpet Measurements -->
+        <div class="measure-panel hidden" id="carpetMeasure">
+          <p class="step-desc">Carpet comes in rolls <strong>3.66m wide</strong>. Enter the lineal meters you need, or calculate from room dimensions.</p>
+
+          <div class="measure-toggle">
+            <button class="toggle-btn active" data-input="direct">I know my lineal meters</button>
+            <button class="toggle-btn" data-input="calculate">Calculate from room size</button>
+          </div>
+
+          <!-- Direct Input -->
+          <div class="measure-input" id="carpetDirect">
+            <div class="input-group-large">
+              <label for="carpetLm">Lineal Meters Required</label>
+              <div class="input-with-unit">
+                <input type="number" id="carpetLm" min="1" max="500" step="0.1" placeholder="e.g. 12">
+                <span class="unit">LM</span>
+              </div>
+              <small>Standard roll width: 3.66m</small>
+            </div>
+          </div>
+
+          <!-- Calculate from Room -->
+          <div class="measure-input hidden" id="carpetCalc">
+            <p class="calc-info">Add your rooms and we'll calculate the lineal meters needed (including 10% waste allowance).</p>
+            <div id="carpetRooms">
+              <div class="room-entry" data-room="1">
+                <div class="room-header">
+                  <span class="room-label">Room 1</span>
+                  <button class="remove-room hidden" aria-label="Remove room">&times;</button>
+                </div>
+                <div class="room-inputs">
+                  <div class="form-group">
+                    <label>Room Name</label>
+                    <input type="text" class="room-name" placeholder="e.g. Master Bedroom">
+                  </div>
+                  <div class="form-group">
+                    <label>Length (m)</label>
+                    <input type="number" class="room-length" min="0.5" max="50" step="0.1" placeholder="0.0">
+                  </div>
+                  <div class="form-group">
+                    <label>Width (m)</label>
+                    <input type="number" class="room-width" min="0.5" max="50" step="0.1" placeholder="0.0">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-sm add-room-btn" id="addCarpetRoom">+ Add Another Room</button>
+            <div class="calc-summary" id="carpetCalcSummary">
+              <div class="summary-row">
+                <span>Total Area:</span>
+                <strong id="carpetTotalArea">0.00 m²</strong>
+              </div>
+              <div class="summary-row">
+                <span>Lineal Meters (incl. 10% waste):</span>
+                <strong id="carpetCalcLm">0.00 LM</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hard Flooring Measurements -->
+        <div class="measure-panel hidden" id="hardMeasure">
+          <p class="step-desc">Enter your total square meters, or calculate from room dimensions.</p>
+
+          <div class="measure-toggle">
+            <button class="toggle-btn active" data-input="direct">I know my m²</button>
+            <button class="toggle-btn" data-input="calculate">Calculate from room size</button>
+          </div>
+
+          <!-- Direct Input -->
+          <div class="measure-input" id="hardDirect">
+            <div class="input-group-large">
+              <label for="hardM2">Square Meters Required</label>
+              <div class="input-with-unit">
+                <input type="number" id="hardM2" min="1" max="5000" step="0.1" placeholder="e.g. 45">
+                <span class="unit">m²</span>
+              </div>
+              <small>Include approx. 10% waste allowance in your figure</small>
+            </div>
+          </div>
+
+          <!-- Calculate from Room -->
+          <div class="measure-input hidden" id="hardCalc">
+            <p class="calc-info">Add your rooms and we'll calculate the total m² needed (including 10% waste allowance).</p>
+            <div id="hardRooms">
+              <div class="room-entry" data-room="1">
+                <div class="room-header">
+                  <span class="room-label">Room 1</span>
+                  <button class="remove-room hidden" aria-label="Remove room">&times;</button>
+                </div>
+                <div class="room-inputs">
+                  <div class="form-group">
+                    <label>Room Name</label>
+                    <input type="text" class="room-name" placeholder="e.g. Living Room">
+                  </div>
+                  <div class="form-group">
+                    <label>Length (m)</label>
+                    <input type="number" class="room-length" min="0.5" max="50" step="0.1" placeholder="0.0">
+                  </div>
+                  <div class="form-group">
+                    <label>Width (m)</label>
+                    <input type="number" class="room-width" min="0.5" max="50" step="0.1" placeholder="0.0">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-sm add-room-btn" id="addHardRoom">+ Add Another Room</button>
+            <div class="calc-summary" id="hardCalcSummary">
+              <div class="summary-row">
+                <span>Total Area:</span>
+                <strong id="hardTotalArea">0.00 m²</strong>
+              </div>
+              <div class="summary-row">
+                <span>With 10% Waste:</span>
+                <strong id="hardTotalWithWaste">0.00 m²</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn btn-outline" id="back2">← Back</button>
+          <button class="btn btn-primary" id="next2" disabled>Next Step →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Product Range -->
+      <div class="estimator-step hidden" id="step3">
+        <h2>Choose your product range</h2>
+        <p class="step-desc">Select a product tier to estimate pricing. All ranges include professional installation.</p>
+
+        <!-- Carpet Ranges -->
+        <div class="range-panel hidden" id="carpetRanges">
+          <div class="range-grid">
+            <button class="range-card" data-range="budget">
+              <div class="range-tier">Budget</div>
+              <h3>Essential</h3>
+              <p class="range-price">$50 – $70 <span>per LM</span></p>
+              <ul>
+                <li>Solution-dyed polyester</li>
+                <li>Standard underlay</li>
+                <li>Professional installation</li>
+                <li>Great for rentals & bedrooms</li>
+              </ul>
+            </button>
+            <button class="range-card" data-range="mid">
+              <div class="range-tier popular">Popular Choice</div>
+              <h3>Premium</h3>
+              <p class="range-price">$75 – $110 <span>per LM</span></p>
+              <ul>
+                <li>Branded nylon or SmartStrand</li>
+                <li>Quality cushion underlay</li>
+                <li>Professional installation</li>
+                <li>Stain & wear resistant</li>
+              </ul>
+            </button>
+            <button class="range-card" data-range="high">
+              <div class="range-tier">Luxury</div>
+              <h3>Designer</h3>
+              <p class="range-price">$120 – $180+ <span>per LM</span></p>
+              <ul>
+                <li>Premium wool or top-tier nylon</li>
+                <li>Premium underlay</li>
+                <li>Professional installation</li>
+                <li>Luxury feel & longevity</li>
+              </ul>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hard Flooring Ranges -->
+        <div class="range-panel hidden" id="hardRanges">
+          <div class="range-sub-type" id="hardSubType">
+            <label>Flooring Type:</label>
+            <div class="sub-type-buttons">
+              <button class="sub-type-btn active" data-subtype="hybrid">Hybrid</button>
+              <button class="sub-type-btn" data-subtype="laminate">Laminate</button>
+              <button class="sub-type-btn" data-subtype="timber">Timber</button>
+              <button class="sub-type-btn" data-subtype="vinyl">Vinyl (LVP)</button>
+            </div>
+          </div>
+          <div class="range-grid" id="hardRangeGrid">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <div class="step-actions">
+          <button class="btn btn-outline" id="back3">← Back</button>
+          <button class="btn btn-primary" id="next3" disabled>See Estimate →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Result -->
+      <div class="estimator-step hidden" id="step4">
+        <div class="estimate-result">
+          <div class="result-header">
+            <div class="result-icon">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="48">
+                <path d="M20 6h8v8l6-2v10l-6-2v8H20v-8l-6 2V12l6 2V6z"/>
+                <rect x="8" y="30" width="32" height="12" rx="2"/>
+                <line x1="16" y1="34" x2="16" y2="38"/>
+                <line x1="24" y1="34" x2="24" y2="38"/>
+                <line x1="32" y1="34" x2="32" y2="38"/>
+              </svg>
+            </div>
+            <h2>Your Estimate</h2>
+            <p class="result-subtitle">Here's the estimated cost for your flooring project</p>
+          </div>
+
+          <div class="result-card">
+            <div class="result-summary">
+              <div class="result-detail">
+                <span class="detail-label">Flooring Type</span>
+                <span class="detail-value" id="resultType">—</span>
+              </div>
+              <div class="result-detail">
+                <span class="detail-label">Product Range</span>
+                <span class="detail-value" id="resultRange">—</span>
+              </div>
+              <div class="result-detail">
+                <span class="detail-label">Quantity</span>
+                <span class="detail-value" id="resultQty">—</span>
+              </div>
+              <div class="result-detail" id="resultRoomsRow" style="display:none">
+                <span class="detail-label">Rooms</span>
+                <span class="detail-value" id="resultRooms">—</span>
+              </div>
+            </div>
+            <div class="result-price-block">
+              <div class="price-range">
+                <span class="price-label">Estimated Total (Supplied & Installed)</span>
+                <div class="price-values">
+                  <span class="price-low" id="priceLow">$0</span>
+                  <span class="price-sep">—</span>
+                  <span class="price-high" id="priceHigh">$0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-breakdown" id="resultBreakdown">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="result-disclaimer">
+            <p><strong>Please note:</strong> This is an indicative estimate only. Actual pricing may vary based on site conditions, subfloor preparation, product availability, access, and any additional work required. Contact us for a detailed, obligation-free quote.</p>
+          </div>
+
+          <div class="result-actions">
+            <button class="btn btn-primary btn-lg" id="contactFromEstimate">Get an Accurate Quote →</button>
+            <button class="btn btn-outline btn-lg" id="startOver">Start Over</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="../public/jt-logo.png" alt="JT Floors" class="logo-img">
+          <span class="logo-text">JT Floors</span>
+        </a>
+        <p>Premium flooring solutions across Melbourne. Quality workmanship, honest service, stunning results.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="estimator.html">Quote Estimator</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0400000000">0400 000 000</a></li>
+          <li><a href="mailto:info@jtfloors.com.au">info@jtfloors.com.au</a></li>
+          <li>Melbourne, VIC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 JT Floors. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/estimator.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
